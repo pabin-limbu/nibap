@@ -5,7 +5,7 @@ import { PrismaPg } from "@prisma/adapter-pg";
 import { env } from "./env";
 
 const adapter = new PrismaPg({
-  connectionString: env.DATABSE_URL,
+  connectionString: env.DATABASE_URL,
 });
 
 const globalForPrisma = global as unknown as { prisma: PrismaClient }; // This code says forget everything that global has and make it unknown and just make it remember it is a prisma client, the original data stays and only ts is updated to avoid error in ts.
