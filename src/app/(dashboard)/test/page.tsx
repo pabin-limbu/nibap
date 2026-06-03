@@ -1,10 +1,9 @@
 import React, { Suspense } from "react";
 import { HealthCheck } from "./health-check";
-import { HydrateClient, prefetch, trpc } from "@/trpc/server";
+import { HydrateClient } from "@/trpc/server";
 import { ErrorBoundary } from "react-error-boundary";
 
 function Page() {
-  prefetch(trpc.health.queryOptions());
   return (
     <HydrateClient>
       <div className="flex flex-col">
