@@ -40,6 +40,8 @@ export function VoiceSelector() {
         }
       : voices[0];
 
+   console.log(systemVoices);
+
   return (
     <Field>
       <FieldLabel>Voice style</FieldLabel>
@@ -67,7 +69,7 @@ export function VoiceSelector() {
           {hasMissingSelectedVoice && currentVoice && (
             <>
               <SelectGroup>
-                <SelectLabel>Selected Voice</SelectLabel>
+                <SelectLabel>Selected Voices</SelectLabel>
                 <SelectItem value={currentVoice.id}>
                   <VoiceAvatar
                     seed={currentVoice.id}
