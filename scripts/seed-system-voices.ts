@@ -59,7 +59,7 @@ const systemVoiceMetadata: Record<string, VoiceMetadata> = {
   },
   Abigail: {
     description: "Friendly and conversational with a warm, approachable tone",
-    category: "CONVERTATIONAL",
+    category: "CONVERSATIONAL",
     language: "en-GB",
   },
   Anaya: {
@@ -105,7 +105,7 @@ const systemVoiceMetadata: Record<string, VoiceMetadata> = {
   },
   Evelyn: {
     description: "Warm Southern charm with a heartfelt, down-to-earth feel",
-    category: "CONVERTATIONAL",
+    category: "CONVERSATIONAL",
     language: "en-US",
   },
   Gavin: {
@@ -125,7 +125,7 @@ const systemVoiceMetadata: Record<string, VoiceMetadata> = {
   },
   Laura: {
     description: "Authentic and warm with a conversational Midwestern tone",
-    category: "CONVERTATIONAL",
+    category: "CONVERSATIONAL",
     language: "en-US",
   },
   Lucy: {
