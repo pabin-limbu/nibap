@@ -17,4 +17,4 @@ export default async function TextToSpeechDetailPage({
       <TextToSpeechDetailView generationId={generationId} />
     </HydrateClient>
   );
-};
+}

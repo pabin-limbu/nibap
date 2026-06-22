@@ -40,7 +40,7 @@ export function VoiceSelector() {
         }
       : voices[0];
 
-   console.log(systemVoices);
+  //  console.log(systemVoices);s
 
   return (
     <Field>
