@@ -116,6 +116,7 @@ export function DashboardSidebar() {
       title: "Voice Cloning",
       icon: Volume2,
       onClick: () => setVoiceDialogOpen(true),
+      
     },
   ];
 
