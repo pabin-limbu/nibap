@@ -8,6 +8,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
 
 import { useAppForm } from "@/hooks/use-app-form";
+import { useCheckout } from "@/features/billing/hooks/use-checkout";
 
 //zod form schema.
 const ttsFormSchema = z.object({
@@ -47,6 +48,7 @@ export function TextToSpeechForm({
     trpc.generations.create.mutationOptions({}),
   );
 
+  const { checkout } = useCheckout();
   //form schema.
   const form = useAppForm({
     ...ttsFormOptions,
@@ -73,7 +75,16 @@ export function TextToSpeechForm({
         const message =
           error instanceof Error ? error.message : "failed to generate audio";
 
-        toast.error(message);
+        if (message === "SUBSCRIPTION_REQUIRED") {
+          toast.error("Subscription required", {
+            action: {
+              label: "Subscribe",
+              onClick: () => checkout(),
+            },
+          });
+        } else {
+          toast.error(message);
+        }
       }
     },
   });
